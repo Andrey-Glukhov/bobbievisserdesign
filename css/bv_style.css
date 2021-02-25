@@ -9,7 +9,10 @@ html {
 * {
     margin: 0;
 }
+
+
 /* ----------- navigation ----------------*/
+
 nav {
     position: fixed;
     top: auto;
@@ -18,65 +21,85 @@ nav {
     min-height: 40px;
     z-index: 110;
 }
-#menu-menu-1>li{
-  list-style-type: none;
-  padding: 0 20px;
+
+#menu-menu-1>li {
+    list-style-type: none;
+    padding: 0 20px;
 }
-#menu-menu-1>li>a{
-color: #000000;
+
+#menu-menu-1>li>a {
+    color: #000000;
 }
-#menu-menu-1{
-  width: 100%;
-  display: flex;
-  justify-content: center;
+
+#menu-menu-1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
-.label>img{
-  width: 120px;
-  height: auto;
+
+.label>img {
+    width: 120px;
+    height: auto;
 }
-.label{
-  text-align: center;
+
+.label {
+    text-align: center;
 }
+
 
 /* ----------- home ----------------*/
 
-.bags_row{
-height: 80vh;
-margin: 20px 0;
+.bags_row {
+    height: 80vh;
+    margin: 20px 0;
 }
+
+
 /* ----------- about ----------------*/
-.bobbie_portret>img{
-  width: 100%;
-  height: auto;
+
+.bobbie_portret>img {
+    width: 100%;
+    height: auto;
 }
+
+
+/* ----------- cart icon ----------------*/
+
+#menu-menu-1 .cart-contents {
+    background-image: url(../img/bag_i.svg);
+    background-position: center;
+    background-size: contain;
+    width: 25px;
+}
+
+#menu-menu-1 .cart-contents .woocommerce-Price-amount.amount {
+    display: none;
+}
+
+
 /*xs*/
 
 @media only screen and (max-width: 576px) {
-  .bags_row{
-  height: 40vh;
-  }
+    .bags_row {
+        height: 40vh;
+    }
 }
 
 
 /*sm*/
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
-  .bags_row{
-  height: 45vh;
-  }
-
+    .bags_row {
+        height: 45vh;
+    }
 }
 
 
 /*md*/
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
-
-}
+@media screen and (min-width: 768px) and (max-width: 992px) {}
 
 
 /*lg*/
 
-@media screen and (min-width: 992px) {
-
-}
+@media screen and (min-width: 992px) {}
