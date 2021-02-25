@@ -42,6 +42,92 @@ add_theme_support('custom-background');
 add_theme_support('custom-header');
 add_theme_support('post-formats', array('aside', 'chat', 'gallery','link','image','quote','status','video'));
 add_theme_support('post-thumbnails');
+function mytheme_add_woocommerce_support() {
+  add_theme_support( 'woocommerce' );
+  add_theme_support( 'wc-product-gallery-zoom' );
+}
+
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+
+
+add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
+
+
+/**
+ * Place cart icon to nav menu
+ *
+ * Source: http://wordpress.org/plugins/woocommerce-menu-bar-cart/
+ */
+add_filter('wp_nav_menu_items','sk_wcmenucart', 10, 2);
+function sk_wcmenucart($menu, $args) {
+    // check if woocommerce plugin is active
+    if ( !in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) || 'primary' !== $args->theme_location )
+        return $menu;
+ 
+    ob_start();
+    bobbievisserdesign_cart_link();
+    //echo $menu_item;
+    $social = ob_get_clean();
+    return $menu . $social;
+}
+
+if ( ! function_exists( 'bobbievisserdesign_cart_link_fragment' ) ) {
+	/**
+	 * Cart Fragments
+	 * Ensure cart contents update when products are added to the cart via AJAX
+	 *
+	 * @param  array $fragments Fragments to refresh via AJAX.
+	 * @return array            Fragments to refresh via AJAX
+	 */
+	function bobbievisserdesign_cart_link_fragment( $fragments ) {
+		global $woocommerce;
+
+		ob_start();
+		bobbievisserdesign_cart_link();
+		$fragments['a.cart-contents'] = ob_get_clean();
+
+		return $fragments;
+	}
+}
+if ( ! function_exists( 'bobbievisserdesign_cart_link' ) ) {
+	/**
+	 * Get  cart link including number of items and sum
+	 * 
+	 */
+	function bobbievisserdesign_cart_link() {
+		if ( ! bobbievisserdesign_cart_available() ) {
+			return;
+		}
+		?>
+			<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr( 'View your shopping cart'); ?>">
+				<?php /* translators: %d: number of items in cart */ ?>
+				<?php echo wp_kses_post( WC()->cart->get_cart_subtotal() ); ?> <span class="count"><?php echo wp_kses_data( sprintf( '%d', WC()->cart->get_cart_contents_count())  ); ?></span>
+			</a>
+		<?php
+	}
+}
+if ( ! function_exists( 'bobbievisserdesign_cart_available' ) ) {
+	/**
+	 * Check if  Woo Cart instance is available 
+	 */
+	function bobbievisserdesign_cart_available() {
+		$woo = WC();
+		return $woo instanceof \WooCommerce && $woo->cart instanceof \WC_Cart;
+	}
+}
+// add menu cart fragment 
+add_filter('woocommerce_add_to_cart_fragments', 'bobbievisserdesign_add_refreshed_fragments');
+
+function bobbievisserdesign_add_refreshed_fragments($fragments) {
+  ob_start();
+
+  bobbievisserdesign_cart_link();
+
+  $cart_part = ob_get_clean();
+  $new_fragments = [];
+  $new_fragments['a.cart-contents'] = $cart_part;
+  return $new_fragments;
+}
 
 remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
 remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
