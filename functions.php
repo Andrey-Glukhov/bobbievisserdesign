@@ -31,6 +31,7 @@ add_action( 'wp_enqueue_scripts', 'bv_script_enqueue' );
 function bv_theme_setup(){
   add_theme_support('menus');
   register_nav_menu('primary', 'Primary Header Navigation');
+  register_nav_menu('footer_menu', 'Footer Navigation Area');
 }
 function mytheme_add_woocommerce_support() {
     add_theme_support( 'woocommerce' );
@@ -42,15 +43,10 @@ add_theme_support('custom-background');
 add_theme_support('custom-header');
 add_theme_support('post-formats', array('aside', 'chat', 'gallery','link','image','quote','status','video'));
 add_theme_support('post-thumbnails');
-function mytheme_add_woocommerce_support() {
-  add_theme_support( 'woocommerce' );
-  add_theme_support( 'wc-product-gallery-zoom' );
-}
-
-add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
 
 
-add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
+
+//add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
 
 
 /**
@@ -60,14 +56,26 @@ add_action( 'wp_enqueue_scripts', 'enqueue_font_awesome' );
  */
 add_filter('wp_nav_menu_items','sk_wcmenucart', 10, 2);
 function sk_wcmenucart($menu, $args) {
-    // check if woocommerce plugin is active
-    if ( !in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) || 'primary' !== $args->theme_location )
+    // check if woocommerce plugin is active	
+    $social = '';
+	
+    if ( !in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
         return $menu;
- 
-    ob_start();
-    bobbievisserdesign_cart_link();
-    //echo $menu_item;
-    $social = ob_get_clean();
+	} elseif ( 'primary' == $args->theme_location) { 
+		ob_start();
+		bobbievisserdesign_cart_link();
+		$social = ob_get_clean();
+	 } elseif ('footer_menu' == $args->theme_location){
+			error_log('1--->' . print_r($args->theme_location, true));
+		ob_start();?>
+		<div class="menu_utilits">
+    		<div class="icon"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></div>
+   			 <div class="icon"><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></div>
+  		</div>
+		<?php $social = ob_get_clean();	
+		error_log('2-->' . $args->theme_location . print_r($social, true));
+	}
+		
     return $menu . $social;
 }
 
@@ -101,7 +109,10 @@ if ( ! function_exists( 'bobbievisserdesign_cart_link' ) ) {
 		?>
 			<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr( 'View your shopping cart'); ?>">
 				<?php /* translators: %d: number of items in cart */ ?>
-				<?php echo wp_kses_post( WC()->cart->get_cart_subtotal() ); ?> <span class="count"><?php echo wp_kses_data( sprintf( '%d', WC()->cart->get_cart_contents_count())  ); ?></span>
+				<?php /*echo wp_kses_post( WC()->cart->get_cart_subtotal() ); */ ?> 
+					<?php if (WC()->cart->get_cart_contents_count() > 0) { ?>
+						<span class="count"> <?php echo wp_kses_data( sprintf( '%d', WC()->cart->get_cart_contents_count())  ); ?></span>
+					<?php } ?>	
 			</a>
 		<?php
 	}

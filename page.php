@@ -1,7 +1,4 @@
 <?php
-/**
-*Template Name: Privacy Policy
-*/
 get_header(); 
 
 while ( have_posts() ) :
@@ -9,4 +6,4 @@ while ( have_posts() ) :
 	the_content();
 endwhile; // End of the loop.
 
-get_footer(); ?>
+ get_footer();

@@ -1,12 +1,13 @@
 <?php
 /**
-*Template Name: Privacy Policy
+*Template Name: Terms and Conditions 
 */
 get_header(); 
 
 while ( have_posts() ) :
 	the_post();
 	the_content();
-endwhile; // End of the loop.
-
+endwhile; //
 get_footer(); ?>
+
+
