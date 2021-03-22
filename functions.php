@@ -56,12 +56,12 @@ add_theme_support('post-thumbnails');
  */
 add_filter('wp_nav_menu_items','sk_wcmenucart', 10, 2);
 function sk_wcmenucart($menu, $args) {
-    // check if woocommerce plugin is active	
+    // check if woocommerce plugin is active
     $social = '';
-	
+
     if ( !in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
         return $menu;
-	} elseif ( 'primary' == $args->theme_location) { 
+	} elseif ( 'primary' == $args->theme_location) {
 		ob_start();
 		bobbievisserdesign_cart_link();
 		$social = ob_get_clean();
@@ -69,13 +69,13 @@ function sk_wcmenucart($menu, $args) {
 			error_log('1--->' . print_r($args->theme_location, true));
 		ob_start();?>
 		<div class="menu_utilits">
-    		<div class="icon"><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a></div>
-   			 <div class="icon"><a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a></div>
+    		<div class="icon"><a href="https://www.instagram.com/bobbie.visser/" target="_blank"><i class="fab fa-instagram"></i></a></div>
+   			 <div class="icon"><a href="https://www.facebook.com/bobbiexvisser" target="_blank"><i class="fab fa-facebook"></i></a></div>
   		</div>
-		<?php $social = ob_get_clean();	
+		<?php $social = ob_get_clean();
 		error_log('2-->' . $args->theme_location . print_r($social, true));
 	}
-		
+
     return $menu . $social;
 }
 
@@ -100,7 +100,7 @@ if ( ! function_exists( 'bobbievisserdesign_cart_link_fragment' ) ) {
 if ( ! function_exists( 'bobbievisserdesign_cart_link' ) ) {
 	/**
 	 * Get  cart link including number of items and sum
-	 * 
+	 *
 	 */
 	function bobbievisserdesign_cart_link() {
 		if ( ! bobbievisserdesign_cart_available() ) {
@@ -109,24 +109,24 @@ if ( ! function_exists( 'bobbievisserdesign_cart_link' ) ) {
 		?>
 			<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr( 'View your shopping cart'); ?>">
 				<?php /* translators: %d: number of items in cart */ ?>
-				<?php /*echo wp_kses_post( WC()->cart->get_cart_subtotal() ); */ ?> 
+				<?php /*echo wp_kses_post( WC()->cart->get_cart_subtotal() ); */ ?>
 					<?php if (WC()->cart->get_cart_contents_count() > 0) { ?>
 						<span class="count"> <?php echo wp_kses_data( sprintf( '%d', WC()->cart->get_cart_contents_count())  ); ?></span>
-					<?php } ?>	
+					<?php } ?>
 			</a>
 		<?php
 	}
 }
 if ( ! function_exists( 'bobbievisserdesign_cart_available' ) ) {
 	/**
-	 * Check if  Woo Cart instance is available 
+	 * Check if  Woo Cart instance is available
 	 */
 	function bobbievisserdesign_cart_available() {
 		$woo = WC();
 		return $woo instanceof \WooCommerce && $woo->cart instanceof \WC_Cart;
 	}
 }
-// add menu cart fragment 
+// add menu cart fragment
 add_filter('woocommerce_add_to_cart_fragments', 'bobbievisserdesign_add_refreshed_fragments');
 
 function bobbievisserdesign_add_refreshed_fragments($fragments) {

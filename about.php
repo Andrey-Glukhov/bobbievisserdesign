@@ -8,7 +8,7 @@ get_header(); ?>
 $q_about = new WP_Query( array( 'page_id' => 13 ) );
 
  if ($q_about -> have_posts() ) : while ( $q_about -> have_posts() ) : $q_about -> the_post(); ?>
-<div class="container"><?php the_content(); ?></div>
+<div class="container about_container"><?php the_content(); ?></div>
 
 <?php endwhile; ?>
 <?php endif; ?>
