@@ -63,9 +63,9 @@ function sk_wcmenucart($menu, $args) {
     if ( !in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
         return $menu;
 	} elseif ( 'primary' == $args->theme_location) {
-		ob_start();
-		bobbievisserdesign_cart_link();
-		$social = ob_get_clean();
+		// ob_start();
+		// bobbievisserdesign_cart_link();
+		// $social = ob_get_clean();
 	 } elseif ('footer_menu' == $args->theme_location){
 			error_log('1--->' . print_r($args->theme_location, true));
 		ob_start();?>
