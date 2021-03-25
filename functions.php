@@ -67,14 +67,14 @@ function sk_wcmenucart($menu, $args) {
 		// bobbievisserdesign_cart_link();
 		// $social = ob_get_clean();
 	 } elseif ('footer_menu' == $args->theme_location){
-			error_log('1--->' . print_r($args->theme_location, true));
+			
 		ob_start();?>
 		<div class="menu_utilits">
     		<div class="icon"><a href="https://www.instagram.com/bobbie.visser/" target="_blank"><i class="fab fa-instagram"></i></a></div>
    			 <div class="icon"><a href="https://www.facebook.com/bobbiexvisser" target="_blank"><i class="fab fa-facebook"></i></a></div>
   		</div>
 		<?php $social = ob_get_clean();
-		error_log('2-->' . $args->theme_location . print_r($social, true));
+		
 	}
 
     return $menu . $social;
@@ -150,5 +150,13 @@ add_filter('woocommerce_show_page_title', 'hide_shop_page_title');
 
 function hide_shop_page_title(){
 	return false;
+}
+
+add_filter('single_product_archive_thumbnail_size', 'set_picture_size');
+
+ function set_picture_size()
+{
+	$result = 'full_size';
+	return $result;
 }
 ?>
