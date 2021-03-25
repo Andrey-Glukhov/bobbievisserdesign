@@ -48,7 +48,7 @@ margin-bottom: 20px;
   text-align: center;
 }
 .outline_button>a{
-  color: #ec4c2e;
+  color: #ec4c2e !important;
   background: transparent;
   border: 1px solid #ec4c2e;
   border-radius: 0;
@@ -56,7 +56,7 @@ margin-bottom: 20px;
   text-decoration: none;
 }
 .outline_button>a:hover{
-  color: #ffffff;
+  color: #ffffff !important;
   background: #ec4c2e;
   text-decoration: none;
 }
@@ -360,6 +360,7 @@ margin: 60px 80px;
   background-color: #ffffff;
   border: 1px solid #ec4c2e;
   color: #ec4c2e;
+  width: auto !important;
   border-radius: 0 !important;
 }
 .coupon>button.button:hover{
@@ -403,7 +404,99 @@ display: none;
   margin-top: 60px;
   margin-bottom: 60px;
 }
+.summary.entry-summary> h1.product_title.entry-title{
+font-family: "ArcherPro-Bold", serif;
+color:#000000;
+font-size: 1.3rem;
+}
+.woocommerce-product-details__short-description>p{
+font-family: "ArcherPro-Book", serif;
+color:#000000;
+font-size: 1rem;
+}
+.product_meta{
+  display: none;
+}
+.shop_container{
+  min-height: 80vh;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.woocommerce-product-gallery__image>a>img{
+  width: 100%;
+  height: auto;
+}
+.summary.entry-summary>form.cart>.single_add_to_cart_button button alt{
+  font-family: "ArcherPro-Book", serif !important;
+  color:#ec4c2e;
+  font-size: 1rem;
+  border-radius: 0;
+}
 
+/* ----------- general ----------------*/
+.general_container{
+  min-height: 80vh;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.general_content>p, .general_content>ol>li, .general_content>ul>li{
+  font-family: "ArcherPro-Book", serif;
+  color: #000000;
+  font-size: 1rem !important;
+}
+.general_content>p>a, .general_content>ol>li>a, .general_content>ul>li>a{
+  font-family: "ArcherPro-Book", serif;
+  color: #ec4c2e;
+  text-decoration: underline;
+  font-size: 1rem !important;
+}
+.general_content>h2{
+  font-family: "ArcherPro-Bold", serif;
+  color: #000000;
+  font-size: 1.3rem !important;
+  margin-top: 35px;
+}
+.general_content>h1{
+  font-family: "ArcherPro-Bold", serif;
+  color: #000000;
+  font-size: 1.3rem !important;
+  margin-bottom: 35px;
+  text-align: center;
+}
+/* ----------- shipping ----------------*/
+.ship_container{
+  min-height: 80vh;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.shipping_title{
+  font-family: "ArcherPro-Bold", serif;
+  color: #000000;
+  font-size: 1.3rem !important;
+  margin-bottom: 35px;
+  text-align: center;
+}
+.sub_title{
+  font-family: "ArcherPro-Bold", serif;
+  color: #000000;
+  font-size: 1.3rem !important;
+  text-align: left;
+}
+.shipping_content{
+  font-family: "ArcherPro-Book", serif;
+  color: #000000;
+  font-size: 1rem;
+}
+.shipping_img>img{
+  width: 100%;
+  height: auto;
+}
+.care_img>img{
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+}
 /* ----------- footer ----------------*/
 .footer_mark {
     text-align: center;
@@ -480,13 +573,24 @@ display: none;
       margin-top: 30px;
       margin-bottom: 30px;
     }
+    .general_container{
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .ship_container{
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+
     .contact_container{
       margin-top: 30px;
       margin-bottom: 30px;
     }
-    .woocommerce-cart-form{
-      margin-top: 30px;
-      margin-bottom: 30px;
+    .woocommerce-cart-form, .cart-collaterals{
+      margin: 30px 20px;
+    }
+    .woocommerce .cart-collaterals, .woocommerce-page .cart-collaterals{
+      width: auto;
     }
     .page_title{
       text-align: center;
@@ -494,6 +598,42 @@ display: none;
     .page_content{
       text-align: center;
     }
+    .woocommerce-page table.cart .product-thumbnail{
+      display:block;
+    }
+    .woocommerce-page table.cart .product-thumbnail::before{
+      display:none;
+    }
+    .woocommerce-cart table.cart img{
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      height: auto;
+    }
+    .actions>button.button{
+      display: none !important;
+    }
+    .woocommerce .product-remove>a.remove{
+      margin-left: auto;
+    }
+
+    .woocommerce table.shop_table_responsive tr:nth-child(2n) td, .woocommerce-page table.shop_table_responsive tr:nth-child(2n) td{
+      background: transparent;
+    }
+    .cart_totals>h2{
+      margin-top: 80px;
+      text-align: center;
+    }
+.woocommerce a.button.alt{
+  margin: auto;
+}
+.shipping_img>img{
+  margin: 20px auto 40px auto;
+}
+.shop_container{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 }
 
 /*sm*/
@@ -531,13 +671,27 @@ display: none;
       margin-top: 30px;
       margin-bottom: 30px;
     }
+    .general_container{
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .ship_container{
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .shop_container{
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
     .contact_container{
       margin-top: 30px;
       margin-bottom: 30px;
     }
-    .woocommerce-cart-form{
-      margin-top: 30px;
-      margin-bottom: 30px;
+    .woocommerce-cart-form, .cart-collaterals{
+      margin: 30px 60px;
+    }
+    .woocommerce .cart-collaterals, .woocommerce-page .cart-collaterals{
+      width: auto;
     }
     .page_title{
       text-align: center;
@@ -548,6 +702,38 @@ display: none;
     .outline_button>a{
       padding: 5px 30px;
     }
+    .woocommerce-page table.cart .product-thumbnail{
+      display:block;
+    }
+    .woocommerce-page table.cart .product-thumbnail::before{
+      display:none;
+    }
+    .woocommerce-cart table.cart img{
+      display: block;
+      margin: 0 auto;
+      width: 70%;
+      height: auto;
+    }
+    .actions>button.button{
+      display: none !important;
+    }
+    .woocommerce .product-remove>a.remove{
+      margin-left: auto;
+    }
+
+    .woocommerce table.shop_table_responsive tr:nth-child(2n) td, .woocommerce-page table.shop_table_responsive tr:nth-child(2n) td{
+      background: transparent;
+    }
+    .cart_totals>h2{
+    margin-top: 80px;
+    text-align: center;
+    }
+.woocommerce a.button.alt{
+  margin: auto;
+}
+.shipping_img>img{
+  margin: 20px auto 40px auto;
+}
 }
 
 /*md*/
