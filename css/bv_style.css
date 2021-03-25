@@ -313,6 +313,7 @@ button.navbar-toggler {
     background-color: #fff;
     color: #fc502e;
     border: 1px solid;
+    border-radius: 0;
 }
 
 .woocommerce-cart-form {
@@ -490,6 +491,15 @@ button.navbar-toggler {
     color: #ec4c2e;
     font-size: 1rem;
     border-radius: 0;
+}
+
+.woocommerce button.button.alt {
+    text-transform: uppercase;
+}
+
+.woocommerce button.button.alt:hover {
+    background-color: #ec4c2e;
+    color: #fff;
 }
 
 
