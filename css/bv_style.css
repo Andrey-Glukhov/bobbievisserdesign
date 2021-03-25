@@ -502,6 +502,15 @@ button.navbar-toggler {
     color: #fff;
 }
 
+.product_price_name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.product_price_name .price {
+    padding: .5em 0;
+}
+
 
 /* ----------- general ----------------*/
 

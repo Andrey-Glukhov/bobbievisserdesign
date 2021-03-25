@@ -159,4 +159,5 @@ add_filter('single_product_archive_thumbnail_size', 'set_picture_size');
 	$result = 'full_size';
 	return $result;
 }
+
 ?>
