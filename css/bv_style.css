@@ -194,38 +194,52 @@ button.navbar-toggler {
 }
 
 
-}
-.collapse:not(.show) {
+/* .collapse:not(.show) {
     transform: translateX(-100%);
 }
+.collapse.collapsing #menu-menu-1 {
+    display: none;
+    transition: none;
+    position: absolute;
+} */
+
 
 /* ----------- navigation footer ----------------*/
 
+
 /* ----------- home ----------------*/
+
 .bags_row {
     height: 80vh;
     margin: 20px 0;
 }
 
+
 /* ----------- about ----------------*/
+
 .bobbie_portret>img {
     width: 100%;
     height: auto;
 }
+
 .about_container {
     min-height: 80vh;
     margin-top: 60px;
 }
+
 .about_alignment {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 .wp-block-image {
     margin-bottom: 0 !important;
 }
 
+
 /* ----------- cart icon ----------------*/
+
 .navbar .cart-contents {
     background-image: url(../img/bag_i.svg);
     background-position: center;
@@ -237,6 +251,7 @@ button.navbar-toggler {
     position: absolute;
     right: 15px;
 }
+
 .navbar .cart-contents .count {
     height: 1rem;
     width: 1rem;
@@ -250,11 +265,14 @@ button.navbar-toggler {
     right: -25%;
     top: 5%;
 }
+
 #menu-menu-1 .cart-contents .woocommerce-Price-amount.amount {
     display: none;
 }
 
+
 /* ----------- wooccommerce ----------------*/
+
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
@@ -264,7 +282,9 @@ button.navbar-toggler {
     border: 1px solid;
 }
 
+
 /* ----------- footer ----------------*/
+
 .footer_mark {
     text-align: center;
     font-family: "ArcherPro-Medium", serif;
@@ -272,10 +292,12 @@ button.navbar-toggler {
     font-size: 0.7rem;
     margin: 17px 0 50px 0;
 }
+
 #mc_embed_signup_scroll {
     display: flex;
     justify-content: center;
 }
+
 #mc_embed_signup input.email {
     margin: 10px 0 !important;
     width: auto !important;
@@ -285,6 +307,7 @@ button.navbar-toggler {
     font-size: 0.7rem !important;
     border: 2px solid #ec4c2e;
 }
+
 #mc_embed_signup input.button {
     margin: 10px 0 !important;
     border-radius: 0 !important;
@@ -297,76 +320,76 @@ button.navbar-toggler {
     padding: 0 10px;
     width: fit-content !important;
 }
+
 #mc_embed_signup input.button:hover {
     background-color: #ec4c2e;
     border: 2px solid #ec4c2e;
 }
+
 #mc_embed_signup form {
     padding: 10px 0 !important;
 }
 
+
 /*xs*/
+
 @media only screen and (max-width: 576px) {
     .bags_row {
         height: 40vh;
     }
-    
     #menu-footer-menu {
         flex-direction: column;
         text-align: center;
     }
-    
     #menu-footer-menu .menu_utilits {
         justify-content: center;
     }
-    
     #menu-footer-menu .menu_utilits .icon {
         margin: 0 5px;
     }
-    
     #menu-menu-1 {
         position: absolute;
         top: 100%;
         /* left: -100%; */
     }
-    
-    .navbar-collapse.collapse.show #menu-menu-1 {
+    /* .navbar-collapse.collapse.show #menu-menu-1 {
         left: 0;
-    }
+    } */
 }
 
+
 /*sm*/
+
 @media screen and (min-width: 576px) and (max-width: 768px) {
     .bags_row {
         height: 45vh;
     }
-    
     #menu-footer-menu {
         flex-direction: column;
         text-align: center;
     }
-    
     #menu-footer-menu .menu_utilits {
         justify-content: center;
     }
-    
     #menu-footer-menu .menu_utilits .icon {
         margin: 0 5px;
     }
-    
     #menu-menu-1 {
         position: absolute;
         top: 100%;
         /* left: -100%; */
     }
-    
-    .navbar-collapse.collapse.show #menu-menu-1 {
+    /* .navbar-collapse.collapse.show #menu-menu-1 {
         left: 0;
-    }
+    } */
 }
 
+
 /*md*/
+
 @media screen and (min-width: 768px) and (max-width: 992px) {}
 
+
 /*lg*/
+
 @media screen and (min-width: 992px) {}
