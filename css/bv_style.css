@@ -229,8 +229,12 @@ button.navbar-toggler {
 /* ----------- home ----------------*/
 
 .bags_row {
-    height: 80vh;
     margin: 20px 0;
+}
+
+.wp-block-image.size-large>img {
+    width: 100%;
+    height: auto;
 }
 
 
@@ -511,6 +515,23 @@ button.navbar-toggler {
     padding: .5em 0;
 }
 
+.button.product_type_simple.add_to_cart_button.ajax_add_to_cart {
+    width: 100%;
+    text-align: center;
+    background-color: #ffffff;
+    border: 1px solid #ec4c2e;
+    text-transform: uppercase;
+    border-radius: 0;
+    color: #ec4c2e;
+    font-family: "ArcherPro-Book", serif !important;
+    font-size: 1rem;
+}
+
+.button.product_type_simple.add_to_cart_button.ajax_add_to_cart:hover {
+    background-color: #ec4c2e;
+    color: #ffffff;
+}
+
 
 /* ----------- general ----------------*/
 
@@ -645,9 +666,6 @@ button.navbar-toggler {
 /*xs*/
 
 @media only screen and (max-width: 576px) {
-    .bags_row {
-        height: 40vh;
-    }
     #menu-footer-menu {
         flex-direction: column;
         text-align: center;
@@ -741,9 +759,6 @@ button.navbar-toggler {
 /*sm*/
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
-    .bags_row {
-        height: 45vh;
-    }
     #menu-footer-menu {
         flex-direction: column;
         text-align: center;
