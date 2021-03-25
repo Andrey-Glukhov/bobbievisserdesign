@@ -44,17 +44,36 @@ html {
 }
 
 .outline_button {
-    color: #ec4c2e;
     font-family: "ArcherPro-Book", serif;
     font-size: 1rem;
     text-align: center;
 }
 
 .outline_button>a {
+    color: #ec4c2e !important;
     background: transparent;
     border: 1px solid #ec4c2e;
     border-radius: 0;
     padding: 5px 60px;
+    text-decoration: none;
+}
+
+.outline_button>a:hover {
+    color: #ffffff !important;
+    background: #ec4c2e;
+    text-decoration: none;
+}
+
+.button_wraper {
+    justify-content: center;
+    margin: 18px 0 0 0;
+}
+
+.page_content>a {
+    color: #ec4c2e;
+    text-decoration: underline;
+    font-family: 'ArcherPro-Semibold';
+    src: url("./ArcherPro-Semibold.woff2") format("woff2"), url("./ArcherPro-Semibold.woff") format("woff");
 }
 
 
@@ -225,6 +244,7 @@ button.navbar-toggler {
 .about_container {
     min-height: 80vh;
     margin-top: 60px;
+    margin-bottom: 60px;
 }
 
 .about_alignment {
@@ -271,7 +291,20 @@ button.navbar-toggler {
 }
 
 
+/* ----------- contact ----------------*/
+
+.contact_container {
+    min-height: 80vh;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+
 /* ----------- wooccommerce ----------------*/
+
+.woocommerce {
+    min-height: 90vh;
+}
 
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
@@ -280,6 +313,265 @@ button.navbar-toggler {
     background-color: #fff;
     color: #fc502e;
     border: 1px solid;
+}
+
+.woocommerce-cart-form {
+    margin: 60px 80px;
+}
+
+.woocommerce table.shop_table {
+    border: none;
+}
+
+.product-name,
+.product-price,
+.product-quantity,
+.product-subtotal {
+    font-family: "ArcherPro-Bold", serif;
+    color: #000000;
+    font-size: 1rem;
+}
+
+.product-name>a {
+    font-family: "ArcherPro-Book", serif;
+    color: #000000;
+    font-size: 1rem;
+}
+
+.woocommerce-cart table.cart img {
+    height: 150px;
+    width: auto;
+}
+
+.woocommerce-message {
+    display: none;
+}
+
+.woocommerce-cart-form__cart-item.cart_item>.product-remove,
+.woocommerce-cart-form__cart-item.cart_item>.product-thumbnail,
+.woocommerce-cart-form__cart-item.cart_item>.product-name,
+.woocommerce-cart-form__cart-item.cart_item>.product-price,
+.woocommerce-cart-form__cart-item.cart_item>.product-quantity,
+.woocommerce-cart-form__cart-item.cart_item>.product-subtotal {
+    border-top: none !important;
+    border-bottom: 1px solid #ec4c2e;
+}
+
+.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents>thead>tr>.product-remove,
+.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents>thead>tr>.product-thumbnail,
+.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents>thead>tr>.product-name,
+.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents>thead>tr>.product-price,
+.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents>thead>tr>.product-quantity,
+.shop_table.shop_table_responsive.cart.woocommerce-cart-form__contents>thead>tr>.product-subtotal {
+    border-bottom: 1px solid #ec4c2e;
+}
+
+.woocommerce .product-remove>a.remove {
+    color: #ec4c2e !important;
+}
+
+.cart-subtotal,
+.order-total,
+.woocommerce-Price-amount.amount>bdi {
+    font-family: "ArcherPro-Medium", serif;
+    color: #000000;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.cart-subtotal>th,
+.order-total>th {
+    padding-left: 0 !important;
+}
+
+.coupon>.input-text {
+    min-width: 180px;
+}
+
+.coupon {
+    margin-top: 30px;
+}
+
+.actions>.coupon {
+    float: right !important;
+}
+
+.actions>button.button {
+    display: none;
+}
+
+.coupon>button.button {
+    background-color: #ffffff;
+    border: 1px solid #ec4c2e;
+    color: #ec4c2e;
+    width: auto !important;
+    border-radius: 0 !important;
+}
+
+.coupon>button.button:hover {
+    background-color: #ec4c2e;
+    border: 1px solid #ec4c2e;
+    color: #ffffff;
+    border-radius: 0 !important;
+}
+
+.coupon>input#coupon_code {
+    font-family: "ArcherPro-Book", serif;
+    color: #000000 !important;
+    font-size: 0.7rem;
+    border-color: #000000;
+}
+
+.cart_totals>h2 {
+    font-family: "ArcherPro-Bold", serif;
+    color: #000000;
+    font-size: 1.3rem;
+}
+
+.wc-proceed-to-checkout>a {
+    font-family: "ArcherPro-Book", serif;
+    color: #ec4c2e;
+    font-size: 1rem !important;
+    width: fit-content;
+    padding: 5px 60px !important;
+    border-radius: 0 !important;
+}
+
+.wc-proceed-to-checkout>a:hover {
+    background-color: #ec4c2e !important;
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+.order-total>th,
+.order-total>td {
+    border-top: 1px solid #ec4c2e !important;
+}
+
+.woocommerce-form-coupon-toggle {
+    display: none;
+}
+
+.content-area>.site-main>.product {
+    min-height: 80vh;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.summary.entry-summary>h1.product_title.entry-title {
+    font-family: "ArcherPro-Bold", serif;
+    color: #000000;
+    font-size: 1.3rem;
+}
+
+.woocommerce-product-details__short-description>p {
+    font-family: "ArcherPro-Book", serif;
+    color: #000000;
+    font-size: 1rem;
+}
+
+.product_meta {
+    display: none;
+}
+
+.shop_container {
+    min-height: 80vh;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.woocommerce-product-gallery__image>a>img {
+    width: 100%;
+    height: auto;
+}
+
+.summary.entry-summary>form.cart>.single_add_to_cart_button button alt {
+    font-family: "ArcherPro-Book", serif !important;
+    color: #ec4c2e;
+    font-size: 1rem;
+    border-radius: 0;
+}
+
+
+/* ----------- general ----------------*/
+
+.general_container {
+    min-height: 80vh;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.general_content>p,
+.general_content>ol>li,
+.general_content>ul>li {
+    font-family: "ArcherPro-Book", serif;
+    color: #000000;
+    font-size: 1rem !important;
+}
+
+.general_content>p>a,
+.general_content>ol>li>a,
+.general_content>ul>li>a {
+    font-family: "ArcherPro-Book", serif;
+    color: #ec4c2e;
+    text-decoration: underline;
+    font-size: 1rem !important;
+}
+
+.general_content>h2 {
+    font-family: "ArcherPro-Bold", serif;
+    color: #000000;
+    font-size: 1.3rem !important;
+    margin-top: 35px;
+}
+
+.general_content>h1 {
+    font-family: "ArcherPro-Bold", serif;
+    color: #000000;
+    font-size: 1.3rem !important;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+
+/* ----------- shipping ----------------*/
+
+.ship_container {
+    min-height: 80vh;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.shipping_title {
+    font-family: "ArcherPro-Bold", serif;
+    color: #000000;
+    font-size: 1.3rem !important;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.sub_title {
+    font-family: "ArcherPro-Bold", serif;
+    color: #000000;
+    font-size: 1.3rem !important;
+    text-align: left;
+}
+
+.shipping_content {
+    font-family: "ArcherPro-Book", serif;
+    color: #000000;
+    font-size: 1rem;
+}
+
+.shipping_img>img {
+    width: 100%;
+    height: auto;
+}
+
+.care_img>img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
 }
 
 
@@ -352,9 +644,78 @@ button.navbar-toggler {
         top: 100%;
         /* left: -100%; */
     }
-    /* .navbar-collapse.collapse.show #menu-menu-1 {
+    .navbar-collapse.collapse.show #menu-menu-1 {
         left: 0;
-    } */
+    }
+    .wp-block-image {
+        margin-bottom: 40px;
+    }
+    .about_container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .general_container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .ship_container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .contact_container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .woocommerce-cart-form,
+    .cart-collaterals {
+        margin: 30px 20px;
+    }
+    .woocommerce .cart-collaterals,
+    .woocommerce-page .cart-collaterals {
+        width: auto;
+    }
+    .page_title {
+        text-align: center;
+    }
+    .page_content {
+        text-align: center;
+    }
+    .woocommerce-page table.cart .product-thumbnail {
+        display: block;
+    }
+    .woocommerce-page table.cart .product-thumbnail::before {
+        display: none;
+    }
+    .woocommerce-cart table.cart img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+    }
+    .actions>button.button {
+        display: none !important;
+    }
+    .woocommerce .product-remove>a.remove {
+        margin-left: auto;
+    }
+    .woocommerce table.shop_table_responsive tr:nth-child(2n) td,
+    .woocommerce-page table.shop_table_responsive tr:nth-child(2n) td {
+        background: transparent;
+    }
+    .cart_totals>h2 {
+        margin-top: 80px;
+        text-align: center;
+    }
+    .woocommerce a.button.alt {
+        margin: auto;
+    }
+    .shipping_img>img {
+        margin: 20px auto 40px auto;
+    }
+    .shop_container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 }
 
 
@@ -379,15 +740,91 @@ button.navbar-toggler {
         top: 100%;
         /* left: -100%; */
     }
-    /* .navbar-collapse.collapse.show #menu-menu-1 {
+    .navbar-collapse.collapse.show #menu-menu-1 {
         left: 0;
-    } */
+    }
+    .wp-block-image {
+        margin-bottom: 50px;
+    }
+    .about_container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .general_container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .ship_container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .shop_container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .contact_container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .woocommerce-cart-form,
+    .cart-collaterals {
+        margin: 30px 60px;
+    }
+    .woocommerce .cart-collaterals,
+    .woocommerce-page .cart-collaterals {
+        width: auto;
+    }
+    .page_title {
+        text-align: center;
+    }
+    .page_content {
+        text-align: center;
+    }
+    .outline_button>a {
+        padding: 5px 30px;
+    }
+    .woocommerce-page table.cart .product-thumbnail {
+        display: block;
+    }
+    .woocommerce-page table.cart .product-thumbnail::before {
+        display: none;
+    }
+    .woocommerce-cart table.cart img {
+        display: block;
+        margin: 0 auto;
+        width: 70%;
+        height: auto;
+    }
+    .actions>button.button {
+        display: none !important;
+    }
+    .woocommerce .product-remove>a.remove {
+        margin-left: auto;
+    }
+    .woocommerce table.shop_table_responsive tr:nth-child(2n) td,
+    .woocommerce-page table.shop_table_responsive tr:nth-child(2n) td {
+        background: transparent;
+    }
+    .cart_totals>h2 {
+        margin-top: 80px;
+        text-align: center;
+    }
+    .woocommerce a.button.alt {
+        margin: auto;
+    }
+    .shipping_img>img {
+        margin: 20px auto 40px auto;
+    }
 }
 
 
 /*md*/
 
-@media screen and (min-width: 768px) and (max-width: 992px) {}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .outline_button>a {
+        padding: 5px 40px;
+    }
+}
 
 
 /*lg*/
