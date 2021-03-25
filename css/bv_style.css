@@ -79,6 +79,15 @@ html {
 
 /* ----------- navigation ----------------*/
 
+header{
+  position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 100;
+    background-color: #ffffff;
+}
 nav {
     position: fixed;
     top: auto;
@@ -122,7 +131,7 @@ nav {
 }
 
 .label>img {
-    width: 120px;
+    width: 110px;
     height: auto;
 }
 
@@ -221,7 +230,9 @@ button.navbar-toggler {
     transition: none;
     position: absolute;
 } */
-
+#menu-menu-1{
+  background-color: #ffffff;
+}
 
 /* ----------- navigation footer ----------------*/
 
@@ -236,6 +247,15 @@ button.navbar-toggler {
   width: 100%;
   height: auto;
 }
+.home-container{
+  padding: 0;
+  min-height: 80vh;
+  margin-top: 160px;
+  margin-bottom: 60px;
+}
+.wp-bootstrap-blocks-row>.no_padding{
+  padding: 0;
+}
 
 /* ----------- about ----------------*/
 
@@ -246,7 +266,7 @@ button.navbar-toggler {
 
 .about_container {
     min-height: 80vh;
-    margin-top: 60px;
+    margin-top: 160px;
     margin-bottom: 60px;
 }
 
@@ -298,7 +318,7 @@ button.navbar-toggler {
 
 .contact_container {
     min-height: 80vh;
-    margin-top: 60px;
+    margin-top: 160px;
     margin-bottom: 60px;
 }
 
@@ -480,7 +500,7 @@ button.navbar-toggler {
 
 .shop_container {
     min-height: 80vh;
-    margin-top: 60px;
+    margin-top: 160px;
     margin-bottom: 60px;
 }
 
@@ -525,7 +545,7 @@ button.navbar-toggler {
 
 .general_container {
     min-height: 80vh;
-    margin-top: 60px;
+    margin-top: 160px;
     margin-bottom: 60px;
 }
 
@@ -566,7 +586,7 @@ button.navbar-toggler {
 
 .ship_container {
     min-height: 80vh;
-    margin-top: 60px;
+    margin-top: 160px;
     margin-bottom: 60px;
 }
 
@@ -677,19 +697,23 @@ button.navbar-toggler {
         margin-bottom: 40px;
     }
     .about_container {
-        margin-top: 30px;
+        margin-top: 130px;
         margin-bottom: 30px;
     }
     .general_container {
-        margin-top: 30px;
+        margin-top: 130px;
         margin-bottom: 30px;
     }
+    .home-container{
+      margin-top: 130px;
+      margin-bottom: 30px;
+    }
     .ship_container {
-        margin-top: 30px;
+        margin-top: 130px;
         margin-bottom: 30px;
     }
     .contact_container {
-        margin-top: 30px;
+        margin-top: 130px;
         margin-bottom: 30px;
     }
     .woocommerce-cart-form,
@@ -739,8 +763,20 @@ button.navbar-toggler {
         margin: 20px auto 40px auto;
     }
     .shop_container {
-        margin-top: 30px;
+        margin-top: 130px;
         margin-bottom: 30px;
+    }
+    #menu-menu-1{
+      background-color: #ec4c2e;
+      text-align: center;
+    padding: 20px 0;
+    }
+    #menu-item-18>a, #menu-item-25>a, #menu-item-19>a, #menu-item-28>a{
+      color: #ffffff;
+    }
+  #menu-item-18.current-menu-item>a, #menu-item-25.current-menu-item>a, #menu-item-19.current-menu-item>a, #menu-item-28.current-menu-item>a {
+        color: #ffffff;
+        text-decoration: underline;
     }
 }
 
@@ -748,7 +784,7 @@ button.navbar-toggler {
 /*sm*/
 
 @media screen and (min-width: 576px) and (max-width: 768px) {
-  
+
     #menu-footer-menu {
         flex-direction: column;
         text-align: center;
@@ -771,23 +807,27 @@ button.navbar-toggler {
         margin-bottom: 50px;
     }
     .about_container {
-        margin-top: 30px;
+        margin-top: 130px;
         margin-bottom: 30px;
     }
     .general_container {
-        margin-top: 30px;
+        margin-top: 130px;
         margin-bottom: 30px;
     }
+    .home-container{
+      margin-top: 130px;
+      margin-bottom: 30px;
+    }
     .ship_container {
-        margin-top: 30px;
+        margin-top: 130px;
         margin-bottom: 30px;
     }
     .shop_container {
-        margin-top: 30px;
+        margin-top: 130px;
         margin-bottom: 30px;
     }
     .contact_container {
-        margin-top: 30px;
+        margin-top: 130px;
         margin-bottom: 30px;
     }
     .woocommerce-cart-form,
@@ -839,6 +879,18 @@ button.navbar-toggler {
     .shipping_img>img {
         margin: 20px auto 40px auto;
     }
+    #menu-menu-1{
+      background-color: #ec4c2e;
+      text-align: center;
+    padding: 20px 0;
+    }
+#menu-item-18>a, #menu-item-25>a, #menu-item-19>a, #menu-item-28>a{
+  color: #ffffff;
+}
+.menu-item.current-menu-item>a {
+    color: #ffffff;
+    text-decoration: underline;
+}
 }
 
 
@@ -848,9 +900,16 @@ button.navbar-toggler {
     .outline_button>a {
         padding: 5px 40px;
     }
+    #menu-menu-1{
+      background-color: #ffffff;
+    }
 }
 
 
 /*lg*/
 
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+  #menu-menu-1{
+    background-color: #ffffff;
+  }
+}
