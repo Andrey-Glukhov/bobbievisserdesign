@@ -532,6 +532,10 @@ button.navbar-toggler {
     color: #ffffff;
 }
 
+.woocommerce form .form-row input.input-text {
+    border-radius: 5px;
+}
+
 
 /* ----------- general ----------------*/
 
