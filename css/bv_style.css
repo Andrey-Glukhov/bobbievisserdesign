@@ -565,6 +565,12 @@ button.navbar-toggler {
     flex-direction: column;
 }
 
+.checkout-container {
+    min-height: 80vh;
+    margin-top: 160px;
+    margin-bottom: 60px;
+}
+
 
 /* ----------- general ----------------*/
 
