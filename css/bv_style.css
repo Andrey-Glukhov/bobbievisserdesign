@@ -458,6 +458,19 @@ button.navbar-toggler {
     font-size: 1.3rem;
 }
 
+.summary.entry-summary form.cart {
+    display: flex;
+    align-items: stretch;
+}
+
+.summary.entry-summary form.cart .quantity input {
+    height: 100%;
+}
+
+.summary.entry-summary form.cart .single_add_to_cart_button {
+    margin-left: 10px;
+}
+
 .wc-proceed-to-checkout>a {
     font-family: "ArcherPro-Book", serif;
     color: #ec4c2e;
@@ -557,38 +570,47 @@ button.navbar-toggler {
     color: #ffffff;
 }
 
+.return-to-shop {
+    text-align: center;
+    margin-top: 180px;
+}
 
-.return-to-shop{
-  text-align: center;
-  margin-top: 180px;
+.return-to-shop>a.button.wc-backward {
+    background-color: #ffffff;
+    border-radius: 0;
+    border: 1px solid #ec4c2e;
+    font-family: "ArcherPro-Book", serif !important;
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: #ec4c2e;
 }
-.return-to-shop>a.button.wc-backward{
-  background-color: #ffffff;
-  border-radius: 0;
-  border: 1px solid #ec4c2e;
-  font-family: "ArcherPro-Book", serif !important;
-  font-size: 1rem;
-  text-transform: capitalize;
-  color: #ec4c2e;
+
+.return-to-shop>a.button.wc-backward:hover {
+    background-color: #ec4c2e;
+    color: #ffffff;
 }
-.return-to-shop>a.button.wc-backward:hover{
-  background-color: #ec4c2e;
-  color: #ffffff;
+
+.added_to_cart.wc-forward {
+    display: none !important;
 }
-.added_to_cart.wc-forward{
-  display: none !important;
+
+.product_price_name {
+    font-family: "ArcherPro-Medium", serif !important;
+    font-size: 1rem;
+    color: #000000;
 }
-.product_price_name{
-  font-family: "ArcherPro-Medium", serif !important;
-  font-size: 1rem;
-  color: #000000;
-=======
+
 .woocommerce form.checkout .form-row input.input-text {
-    border-radius: 5px;
+    border-radius: 10px;
+    padding: 6px 0;
 }
 
 .woocommerce form.checkout .form-row {
     flex-direction: column;
+}
+
+.woocommerce form.checkout .form-row.place-order {
+    flex-direction: row;
 }
 
 .checkout-container {
@@ -726,7 +748,6 @@ button.navbar-toggler {
 #mc_embed_signup form {
     padding: 10px 0 !important;
 }
-
 
 
 /*xs*/
